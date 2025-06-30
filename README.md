@@ -96,7 +96,14 @@ Detail Kolom:
 
 ```
 ## Method
-Project ini diselesaikan menggunakan docker yang akan membantu menjalankan aiflow, kibana, elasticsearch, dan postgresql.
+
+Proyek ini diselesaikan menggunakan Docker, yang membantu menjalankan berbagai komponen utama seperti Airflow, Kibana, Elasticsearch, dan PostgreSQL.
+
+- Proses ETL: Membersihkan dan mentransformasikan dataset mentah menjadi format terstruktur tanpa nilai yang hilang.
+- Airflow DAG: Mengotomatiskan penjadwalan dan orkestrasi alur kerja ETL.
+- Validasi Data: Memvalidasi dataset yang telah dibersihkan menggunakan Great Expectations dengan hasil output bernilai sukses (true).
+- Memuat Data ke Elasticsearch: Mengindeks data yang telah diproses untuk memudahkan proses pencarian dan kueri secara efisien.
+- Visualisasi menggunakan Kibana: Membangun dashboard interaktif untuk memperoleh wawasan dari data yang telah diindeks.
 
 ## Stacks
 - python
