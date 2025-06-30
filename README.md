@@ -2,7 +2,7 @@
 Sales Performance Analysis Automation at KF Company
 
 ## Repository Outline
-
+```
 M3-Sales-Performance-Analysis-Automation-at-KF-Company/
 ├── dags
 |   └── P2M3_MuhammadFarhan_Hendriyanto_DAG.py
@@ -27,7 +27,7 @@ M3-Sales-Performance-Analysis-Automation-at-KF-Company/
 ├── P2M3_MuhammadFarhan_Hendriyanto_ddl.txt
 ├── P2M3_MuhammadFarhan_Hendriyanto_GX.ipynb
 └── README.md
-
+```
 ## Problem Background
 Menurut Prosple Indonesia (https://id.prosple.com/career-planning/10-perusahaan-terbaik-untuk-lulusan-farmasi), Kimia Farma merupakan salah satu perusahaan farmasi terbesar di Indonesia. Kesuksesan perusahaan ini tidak lepas dari kinerja penjualan harian yang dilakukan oleh setiap cabang. Oleh karena itu, performa masing-masing cabang memiliki peran penting dalam mendukung pertumbuhan dan keberlangsungan bisnis Kimia Farma secara keseluruhan.
 
