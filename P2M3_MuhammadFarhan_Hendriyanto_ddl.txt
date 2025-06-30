@@ -1,0 +1,54 @@
+===========================================
+PREFACE
+===========================================
+This program is aims to create tables and insert the dataset into a PostgreSQL database.
+
+===========================================
+URL DATASET
+===========================================
+Dataset URL: https://www.kaggle.com/datasets/anggundwilestari/kimia-farma-performance-analysis-2020-2023?select=Analysis+Kimia+Farma_Query.txt
+
+===========================================
+Data Definition Language Syntax
+===========================================
+Defines the structure of the `table_m3`, specifying columns, data types, and constraints using `CREATE TABLE`.
+
+CREATE TABLE table_m3 (
+    id SERIAL PRIMARY KEY,
+    product_id VARCHAR(20),
+    product_name TEXT,
+    product_category TEXT,
+    price NUMERIC,
+    transaction_id VARCHAR(20),
+    transaction_date DATE,
+    branch_id VARCHAR(20),
+    customer_name TEXT,
+    discount_percentage NUMERIC,
+    rating_transaksi NUMERIC,
+    branch_category TEXT,
+    branch_name TEXT,
+    kota VARCHAR(100),
+    provinsi VARCHAR(100),
+    rating_cabang NUMERIC,
+    inventory_id VARCHAR(20),
+    opname_stock INTEGER,
+    persentase_gross_laba NUMERIC,
+    nett_sales NUMERIC,
+    nett_profit NUMERIC
+);
+===========================================
+Data Manipulation Language Syntax
+===========================================
+Inserts data from a CSV file into the `table_m3` using `COPY`.
+
+COPY table_m3 (
+    product_id, product_name, product_category, price, transaction_id, transaction_date, branch_id, customer_name, 
+    discount_percentage, rating_transaksi, branch_category, branch_name, kota, provinsi, rating_cabang, inventory_id, 
+    opname_stock, persentase_gross_laba, nett_sales, nett_profit
+)
+FROM '/data/P2M3_MuhammadFarhan_Hendriyanto_KimiaFarma_Dataset_sampling.csv'
+WITH (
+    FORMAT csv,
+    HEADER true,
+    DELIMITER ','
+);

@@ -1,0 +1,64 @@
+1. Jelaskan apa yang dimaksud dengan NoSQL menggunakan pemahaman yang kalian ketahui !
+
+Jawab:
+NoSQL adalah jenis database yang nggak pakai struktur tabel seperti database relasional (SQL). 
+Biasanya dipakai buat data yang bentuknya kurang/tidak terstruktur atau semi-terstruktur, misalnya data JSON, dokumen, key-value, graph, dsbg. 
+NoSQL ini cocok buat sistem yang butuh fleksibilitas, cepat, dan bisa skala besar kayak aplikasi real-time, social media, atau big data.
+
+2. Jelaskan kapan harus menggunakan NoSQL dan Relational Database Management System !
+
+Jawab:
+- NoSQL:
+    - Datanya nggak punya struktur tetap atau sering berubah-ubah (contoh: data JSON, log aktivitas).
+    - Aplikasi butuh kecepatan tinggi, skalabilitas, dan fleksibilitas (misalnya aplikasi media sosial atau sistem rekomendasi).
+    - Mau simpan data dalam jumlah besar yang terus bertambah, kayak log server atau histori transaksi.
+
+- RDBMS:
+    - Struktur datanya tetap dan punya relasi antar tabel (contoh: data karyawan, data keuangan).
+    - Perlu data yang konsisten dan valid secara relasional (misalnya untuk transaksi perbankan).
+    - Query-nya kompleks, dan butuh join antar tabel.
+
+3. Sebutkan contoh 2 tools/platform NoSQL selain ElasticSearch beserta keunggulan tools/platform tersebut !
+
+Jawab:
+- MongoDB
+    - Keunggulan:
+        - Bisa simpan data dalam format JSON/BSON.
+        - Fleksibel, cocok buat data yang strukturnya dinamis.
+        - Skalabel dan bisa pakai sharding (pemecahan data biar bisa lebih cepat).
+- Redis
+    - Keunggulan:
+        - Super cepat, cocok buat cache atau data yang sering diakses cepat.
+        - Support data struktur kompleks kayak list, set, hash.
+        - Bisa dipakai buat real-time analytics atau leaderboard.
+
+4. Jelaskan apa yang Anda ketahui dari Airflow menggunakan pemahaman dan bahasa Anda sendiri !
+
+Jawab:
+Airflow itu tools dari Apache yang biasa dipakai buat otomatisasi alur kerja data (workflow). 
+Jadi, kita bisa bikin proses ETL (Extract, Transform, Load) atau pipeline data, terus dijalankan otomatis sesuai jadwal. 
+Airflow ini pakai kode Python buat bikin task-task-nya, dan kita bisa atur urutan task-nya pakai konsep DAG (Directed Acyclic Graph).
+Contohnya, bisa bikin workflow: ambil data -> bersihin data -> simpan ke database -> kirim ke dashboard, semua bisa dijalankan otomatis pakai Airflow.
+
+5. Jelaskan apa yang Anda ketahui dari Great Expectations menggunakan pemahaman dan bahasa Anda sendiri !
+
+Jawab:
+Great Expectations itu tools buat ngecek dan validasi data. Jadi sebelum data diproses lebih lanjut, kita bisa pastikan datanya udah sesuai harapan. 
+Misalnya: jumlah kolom harus sama, kolom tertentu nggak boleh kosong, atau nilainya harus dalam rentang tertentu.
+Cocok dipakai pas proses ETL agar kita tahu kalau ada data yang aneh atau nggak sesuai sebelum masuk ke tahap selanjutnya. 
+Kita bisa nulis “expectation” atau aturan pengecekan dalam bentuk kode atau file konfigurasi.
+
+6. Jelaskan apa yang Anda ketahui dari Batch Processing menggunakan pemahaman dan bahasa Anda sendiri (Definisi, Contoh Kasus Penggunaan, Tools, dll) !
+
+Jawab:
+Batch processing adalah proses pengolahan data dalam jumlah besar yang dijalankan sekaligus (dalam satu batch) dan biasanya dijadwalkan (misalnya tiap malam atau tiap minggu). 
+Jadi nanti data yang diproses dikumpulin dulu, kemudian baru dieksekusi.
+    - Contoh kasus:
+        - Proses generate laporan harian penjualan.
+        - Hitung gaji karyawan tiap bulan.
+        - Analisis histori transaksi pelanggan tiap malam.
+    - Tools yang biasa dipakai:
+        - Apache Spark
+        - Apache Airflow (buat orkestrasi batch)
+        - Talend
+        - Pentaho
