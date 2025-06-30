@@ -28,15 +28,12 @@ default_args = {
     'start_date': datetime(2024, 11, 1)
 }
 
-
 def readCSV():
     '''
     Function used to read CSV file
     '''
     df = pd.read_csv(
         '/opt/airflow/data/P2M3_MuhammadFarhan_Hendriyanto_KimiaFarma_Dataset_sampling.csv')
-
-
 
 with DAG(
     dag_id='P2M3_muhammadfarhan_hendriyanto_DAG',
@@ -51,6 +48,10 @@ with DAG(
 
     @task()
     def extract():
+        '''
+        Function used to transform data
+        '''
+        
         database = 'airflow'
         username = 'airflow'
         password = 'airflow'
